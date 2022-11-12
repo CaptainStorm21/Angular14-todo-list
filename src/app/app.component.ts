@@ -20,8 +20,12 @@ export class AppComponent {
   ]
 
   //event binding
-  add() {
-    // console.log('hello world');
-    
+  //local referencing newTask:string
+  add(newTask: string) {
+    if (newTask.length>0){
+      alert(newTask);
+    } else {
+      alert ('please enter a new task')
+    }
   }
 }

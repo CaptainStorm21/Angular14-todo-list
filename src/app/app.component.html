@@ -2,10 +2,11 @@
   <div class="todo-list">
     <!--one way binding-->
     <h1>{{title}}</h1>
+    <!--#newTask is a local referencing-->
     <div class="input-group">
-      <input type="text" placeholder="Todo" />
+      <input type="text" placeholder="Todo" #newTask/>
       <!--event binding-->
-      <button class="add-button" (click)="add()">+</button>
+      <button class="add-button" (click)="add(newTask.value)" >+</button>
     </div>
     <table>
       <!--ngFor-->
