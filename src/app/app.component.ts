@@ -22,8 +22,9 @@ export class AppComponent {
   //event binding
   //local referencing newTask:string
   add(newTask: string) {
-    if (newTask.length>0){
-      alert(newTask);
+    if (newTask.length > 0) {
+      //adding a new task to the list
+      this.tasks.push(newTask);
     } else {
       alert ('please enter a new task')
     }
