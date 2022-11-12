@@ -4,54 +4,21 @@
     <h1>{{title}}</h1>
     <div class="input-group">
       <input type="text" placeholder="Todo" />
-      <button class="add-button">+</button>
+      <!--event binding-->
+      <button class="add-button" (click)="add()">+</button>
     </div>
     <table>
-      <tr class="even">
+      <!--ngFor-->
+      <tr *ngFor = "let task of tasks" class="even">
         <td>
-          <pre>Visit Anne</pre>
+          <pre>{{task}}</pre>
         </td>
         <td>
           <button class="remove-button">X</button>
           <button class="done-button">Done</button>
         </td>
       </tr>
-      <tr class="odd">
-        <td>
-          <pre>Call Dad</pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>Go to Gym</pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="odd">
-        <td>
-          <pre>Wash Dishes</pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>Go to Work</pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
+
     </table>
   </div>
 </div>
