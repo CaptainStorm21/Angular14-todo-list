@@ -86,7 +86,7 @@ tr {
 }
 
 td {
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 
 .even {
@@ -102,4 +102,13 @@ td {
 
 h1 {
   font-family: 'Caveat', cursive;
+}
+
+.is-done{
+  text-decoration: line-through;
+  background-color: green;
+}
+
+p{
+  text-transform: capitalize;
 }
