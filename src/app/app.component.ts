@@ -29,25 +29,29 @@ export class AppComponent {
 
   //remove a task
   remove(existingTask: Task) {
-    var userConfirmed = confirm(`Are you sure you want to remove ${existingTask}?`);
+    var userConfirmed =
+      confirm(`Are you sure you want to remove ${existingTask.title}?`);
 
     if (userConfirmed == true) {
       this.tasks = this.tasks.filter(task => task != existingTask);
     }
   }
 
-  //confirm done
-  markAsDone(task: Task) {
-    alert('"' + task.title + '" task is done');
-    task.isDone = true;
-  }
+
 }
 
 
 class Task {
   constructor(
     public title: string
-  ){}
+  ) { }
+
+  //confirm done
+  toggleIsDone() {
+    // alert('"' + task.title + '" task is done');
+    //toggling between done and undone
+    this.isDone = !this.isDone;
+  }
   public isDone=false
 
 }
