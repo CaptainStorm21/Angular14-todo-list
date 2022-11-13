@@ -11,32 +11,43 @@ export class AppComponent {
   title = "My Todo list"
 
   //ngFor loop array
-  tasks: string[] = [
-    "go to the gym",
-    "call dad",
-    "go to the library",
-    "clean dishes",
-    "Shop for the party"
+  tasks: Task[] = [
+    new Task("go to the gym"),
+    new Task("call dad"),
+    new Task("go to the library"),
+    new Task("clean dishes"),
+    new Task("Shop for the party")
   ]
 
   //event binding
   //local referencing newTask:string
   add(newTask: string) {
-    if (newTask.length > 0) {
       //adding a new task to the list
-      this.tasks.push(newTask);
-    } else {
-      alert ('please enter a new task')
-    }
+      this.tasks.push(new Task(newTask));
+
   }
 
   //remove a task
-  remove(existingTask: string) {
+  remove(existingTask: Task) {
     var userConfirmed = confirm(`Are you sure you want to remove ${existingTask}?`);
 
     if (userConfirmed == true) {
       this.tasks = this.tasks.filter(task => task != existingTask);
     }
   }
+
+  //confirm done
+  markAsDone(task: Task) {
+    alert('"' + task.title + '" task is done');
+    task.isDone = true;
+  }
+}
+
+
+class Task {
+  constructor(
+    public title: string
+  ){}
+  public isDone=false
 
 }

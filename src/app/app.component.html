@@ -12,12 +12,12 @@
       <!--ngFor-->
       <tr *ngFor = "let task of tasks" class="even">
         <td>
-          <pre>{{task}}</pre>
+          <pre>{{task.title}}</pre>
         </td>
         <td>
           <button class="remove-button"
                   (click)="remove(task)">X</button>
-          <button class="done-button">Done</button>
+          <button class="done-button" (click)="markAsDone(task)">Done</button>
         </td>
       </tr>
 
