@@ -4,3 +4,14 @@ font-family: 'Quicksand', sans-serif;
 h1 {
   font-family: 'Caveat', cursive;
 }
+header {
+  margin: -10px;
+  margin-bottom: 50px;
+  color: palegoldenrod;
+  background-color: rgb(3, 85, 139);
+  padding: 2rem 2rem;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  font-size: 1em;
+}
